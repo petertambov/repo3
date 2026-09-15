@@ -4,8 +4,8 @@ import java.util.*;
 
 public class MyThreadPool {
 
-    private Deque<Runnable> tasks = new LinkedList<>();
-    private List<MyThread> threads = new ArrayList<>();
+    private final Deque<Runnable> tasks = new LinkedList<>();
+    private final List<MyThread> threads = new ArrayList<>();
     private volatile boolean shutdown = false;
 
     private class MyThread extends Thread {
